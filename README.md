@@ -22,14 +22,15 @@ A small learning project built around testing a SystemVerilog FIFO with Verilato
 
 ## Workflow
 
-Start the watchdog, then run the simulation:
+Start the watchdog, run the simulation, and open waveforms when needed:
 
 ```bash
 ./scripts/verilator_watchdog.sh &
 make run
+make wave
 ```
 
-The testbench drives and checks the FIFO, GTKWave is used for waveform inspection, and the watchdog appends run output to `logs/sim.log`.
+The testbench drives and checks the FIFO, `make wave` opens GTKWave, and the watchdog appends run output to `logs/sim.log`.
 
 ## Purpose
 
