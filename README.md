@@ -5,7 +5,7 @@
 A small learning project that demonstrates a simple RTL verification flow with Verilator, a C++ testbench, GTKWave, and a Bash watchdog for simulation logging.
 
 ## Structure
-
+```text
 .
 ├── logs
 │   └── sim.log
@@ -17,7 +17,7 @@ A small learning project that demonstrates a simple RTL verification flow with V
 │   └── verilator_watchdog.sh
 └── tb
     └── tb_fifo.cpp
-
+```
 ## Workflow
 
 Write RTL, build and run with Verilator, verify behavior in the C++ testbench, inspect waveforms in GTKWave, and monitor simulation output through the Bash watchdog.
