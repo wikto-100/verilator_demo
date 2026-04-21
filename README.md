@@ -2,9 +2,10 @@
 
 ## Overview
 
-A small learning project that demonstrates a simple RTL verification flow with Verilator, a C++ testbench, GTKWave, and a Bash watchdog for simulation logging.
+A small learning project built around testing a SystemVerilog FIFO with Verilator, a C++ testbench, GTKWave, and a Bash watchdog for simulation logging.
 
 ## Structure
+
 ```text
 .
 ├── logs
@@ -18,19 +19,18 @@ A small learning project that demonstrates a simple RTL verification flow with V
 └── tb
     └── tb_fifo.cpp
 ```
+
 ## Workflow
 
-Write RTL, build and run with Verilator, verify behavior in the C++ testbench, inspect waveforms in GTKWave, and monitor simulation output through the Bash watchdog.
-
-Start the watchdog in the background, then run the simulation:
+Start the watchdog, then run the simulation:
 
 ```bash
 ./scripts/verilator_watchdog.sh &
 make run
 ```
 
-The watchdog appends simulation log entries to `logs/sim.log` while the Verilator testbench runs.
+The testbench drives and checks the FIFO, GTKWave is used for waveform inspection, and the watchdog appends run output to `logs/sim.log`.
 
 ## Purpose
 
-This project is a learning demo meant to showcase a minimal development workflow in Verilator, including basic C++ testbench verification, waveform debugging, and Bash logging.
+This project is meant to practice a minimal RTL verification flow with SystemVerilog, Verilator, C++, waveforms, and simple Bash tooling.
